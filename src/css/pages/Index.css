@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  transition: .3s;
+  position: relative;
+  outline: none; }
+
+.complementary {
+  color: #fca311; }
+
+.dimmer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(2px);
+  z-index: 1; }
+
+.h1-lg {
+  font-size: 3rem; }
+
+.h1-md {
+  font-size: 1.5rem; }
+
+.h1-sm {
+  font-size: 1rem; }
+
+.important {
+  position: relative;
+  width: fit-content; }
+  .important::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5%;
+    width: 100%;
+    background-color: #fca311; }
+
+.btn {
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  cursor: pointer; }
+
+.btn--lg {
+  padding: .8rem;
+  border-radius: 4px; }
+
+.btn--md {
+  padding: .5rem; }
+
+.btn--complementary {
+  background-color: #fca311; }
+
+.btn--blk {
+  display: block;
+  width: 100%; }
+
+.form {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 2rem 1rem;
+  color: #b3b3b3; }
+  .form .form_header {
+    text-align: center; }
+    .form .form_header h1, .form .form_header p {
+      line-height: 0;
+      color: #cccccc; }
+    .form .form_header p {
+      font-size: .8rem; }
+  .form .form_fields {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center; }
+    .form .form_fields label {
+      width: 100%;
+      display: block;
+      margin: .5rem 0; }
+      .form .form_fields label input {
+        color: #cccccc; }
+      .form .form_fields label input[type="number"], .form .form_fields label input[type="text"], .form .form_fields label input[type], .form .form_fields label select {
+        display: block;
+        width: 100%;
+        padding: .5rem;
+        background-color: transparent;
+        border: 1px solid #4d4d4d;
+        margin: .3rem 0;
+        border-radius: 2px; }
+        .form .form_fields label input[type="number"]:focus, .form .form_fields label input[type="text"]:focus, .form .form_fields label input[type]:focus, .form .form_fields label select:focus {
+          box-shadow: 0 0 0 1.5px #14213d, 0 0 0 3px rgba(252, 163, 17, 0.3); }
+    .form .form_fields span {
+      align-self: flex-start;
+      color: #fca311; }
+    .form .form_fields .btn {
+      border-radius: 2px; }
+
+.masthead {
+  height: 100vh;
+  background: url("../../media/img/masthead_bg.jpg") center center/cover;
+  backdrop-filter: brightness(60%);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .masthead .center {
+    width: 70%;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; }
+    .masthead .center .masthead_children {
+      width: 45%; }
+    .masthead .center .masthead_form_container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100%; }
+      .masthead .center .masthead_form_container .form {
+        width: 80%;
+        background-color: #14213d; }
+  .masthead h1 {
+    color: #fff; }
+  .masthead p {
+    color: #e5e5e5;
+    margin: 2rem 0; }
+
+.section {
+  width: 100%; }

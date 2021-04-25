@@ -1,0 +1,29 @@
+@import '../base/reset.scss';
+.btn{
+
+    color: $white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+
+}
+
+.btn--lg{
+    padding: .8rem;
+    border-radius: 4px;
+}
+
+.btn--md{
+    padding: .5rem;
+}
+
+.btn--complementary{
+
+    background-color: $complementary_color;
+
+}
+
+.btn--blk{
+    display: block;
+    width: 100%;
+}

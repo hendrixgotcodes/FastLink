@@ -1,0 +1,60 @@
+@import '../abstracts/variable';
+@import '../components/button';
+@import '../components/form';
+
+
+.masthead{
+    height: 100vh;
+    background: url('../../media/img/masthead_bg.jpg') center center/cover;
+    backdrop-filter: brightness(60%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .center{
+        width: 70%;
+        z-index: 2; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        
+        .masthead_children{
+            width: 45%;
+
+            
+        }
+
+        .masthead_form_container{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100%;
+
+            .form{
+                width: 80%;
+                background-color: $primary_color;
+            }
+        
+        }
+        
+    }
+
+    h1{
+        color: $white;
+    }
+    p{
+        color: $off-white;
+        margin: 2rem 0;
+    }
+
+
+
+
+}
+
+.section{
+
+    width: 100%;
+
+}
