@@ -1,0 +1,43 @@
+.navbar {
+  height: 9%; }
+  .navbar .avatar_wrapper {
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff; }
+    .navbar .avatar_wrapper #username {
+      margin-left: .8rem;
+      font-weight: bold; }
+
+.dashboard_body {
+  width: 100vw;
+  margin-top: 4%; }
+  .dashboard_body .center {
+    width: 70%;
+    margin: auto;
+    padding: 1rem 0;
+    background-color: #fff; }
+    .dashboard_body .center .banner {
+      width: 100%;
+      margin: 1rem 0; }
+      .dashboard_body .center .banner button:focus {
+        box-shadow: 0 0 0 0.7px white, 0 0 0 2.3px rgba(252, 163, 17, 0.6); }
+    .dashboard_body .center .content {
+      width: 100%; }
+      .dashboard_body .center .content .form_wrapper {
+        height: 60vh;
+        overflow-y: hidden; }
+        .dashboard_body .center .content .form_wrapper form {
+          border-radius: 0;
+          margin: 0; }
+          .dashboard_body .center .content .form_wrapper form .btn {
+            margin-top: 1rem; }
+      .dashboard_body .center .content .form_wrapper--hidden {
+        height: 0vh; }
+      .dashboard_body .center .content .form_wrapper, .dashboard_body .center .content .tab_wrapper {
+        width: 100%; }
+      .dashboard_body .center .content .tab_wrapper .MuiTabs-indicator {
+        background-color: #fca311; }
+      .dashboard_body .center .content .tab_wrapper .MuiTableHead-root, .dashboard_body .center .content .tab_wrapper .MuiTableRow-head {
+        background-color: #14213d; }

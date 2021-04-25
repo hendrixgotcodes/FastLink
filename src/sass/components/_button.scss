@@ -8,6 +8,10 @@
 
 }
 
+.btn--rnd{
+    border-radius: 3px;
+}
+
 .btn--lg{
     padding: .8rem;
     border-radius: 4px;
@@ -21,6 +25,10 @@
 
     background-color: $complementary_color;
 
+}
+
+.btn--primary{
+    background-color: $primary_color;
 }
 
 .btn--blk{

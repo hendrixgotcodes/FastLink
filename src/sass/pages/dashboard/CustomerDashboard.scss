@@ -1,0 +1,85 @@
+@import '../../abstracts/variable';
+
+.navbar{
+
+    height: 9%;
+
+    .avatar_wrapper{
+        width: fit-content;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $white;
+
+        #username{
+            margin-left: .8rem;
+            font-weight: bold;
+        }
+    }
+
+}
+
+.dashboard_body{
+
+    width: 100vw;
+    margin-top: 4%;
+
+    .center{
+        width: 70%;
+        margin: auto;
+        padding: 1rem 0;
+        background-color: $white;
+
+        .banner{
+            width: 100%;
+            margin: 1rem 0;
+
+            button:focus{
+
+                box-shadow: 0 0 0 .7px rgba($color: #fff, $alpha: 1), 0 0 0 2.3px rgba($color: $complementary_color, $alpha: 0.6);
+
+            }
+        }
+
+        .content{
+            width: 100%;
+
+            .form_wrapper{
+                height: 60vh;
+                overflow-y: hidden;
+
+                form{
+                    border-radius: 0;
+                    margin: 0;
+
+                    .btn{
+                        margin-top: 1rem;
+                    }
+                }
+            }
+
+            .form_wrapper--hidden{
+                height: 0vh;
+            }
+
+            .form_wrapper, .tab_wrapper{
+                width: 100%;
+            }
+
+            .tab_wrapper{
+
+                .MuiTabs-indicator{
+                    background-color: $complementary_color;
+                }
+
+                .MuiTableHead-root, .MuiTableRow-head{
+                    background-color: $primary_color;
+                }
+
+            }
+
+        }
+
+    }
+
+}

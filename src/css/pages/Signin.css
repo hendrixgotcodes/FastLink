@@ -1,0 +1,31 @@
+.section--signin {
+  background: url("../../media/img/masthead_bg.jpg") center center/cover;
+  backdrop-filter: brightness(60%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem;
+  height: 100vh; }
+  .section--signin form {
+    margin: auto;
+    width: 30%;
+    z-index: 2;
+    padding: 2rem 1rem; }
+    .section--signin form .form_header {
+      line-height: 1rem;
+      margin-bottom: 1rem; }
+    .section--signin form .radio_label {
+      width: 100%;
+      margin: 1rem; }
+      .section--signin form .radio_label label {
+        display: block;
+        width: 100%; }
+        .section--signin form .radio_label label span {
+          font-size: .9rem;
+          color: #cccccc;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center; }
+          .section--signin form .radio_label label span input[type="radio"] {
+            width: 20px;
+            display: inline; }

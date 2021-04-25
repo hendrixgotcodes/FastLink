@@ -12,8 +12,8 @@ export default function Navbar() {
                 </div>
                 <div className="navbar_links">
 
-                    <Link className="navbar_link">Home</Link>
-                    <Link to="/register" className="navbar_link">Get A Loan</Link>
+                    <Link to="/" className="navbar_link">Home</Link>
+                    <Link to="/login" className="navbar_link">Login</Link>
                     <Link to="/register" className="navbar_link">Register</Link>
 
                 </div>

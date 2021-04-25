@@ -1,6 +1,6 @@
 .form{
 
-    background-color: $white;
+    background-color: $primary_color;
     border-radius: 8px;
     padding: 2rem 1rem;
     color: darken($color: $white, $amount: 30);
@@ -33,6 +33,7 @@
             width: 100%;
             display: block;
             margin: .5rem 0;
+            
 
             input{
                 color: darken($color: $white, $amount: 20);
@@ -52,6 +53,8 @@
                 }
             }
         }
+
+        
 
         span{
             align-self: flex-start;

@@ -1,0 +1,56 @@
+@import '../base/reset.scss';
+
+.section--signup{
+
+    background: url('../../media/img/masthead_bg.jpg') center center/cover;
+    backdrop-filter: brightness(60%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: fit-content;
+    padding: 8rem;
+
+    form{
+        margin: auto;
+        width: 30%;
+        z-index: 2;
+        padding: 2rem 1rem;
+
+        .form_header{
+            line-height: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .radio_label{
+            width: 100%;
+
+            label{
+                display: block;
+                width: 100%;
+
+                // display: flex;
+                // justify-content: space-between;
+                // align-items: center;
+
+                
+
+                span{
+                    font-size: .9rem;
+                    color: darken($color: $white, $amount: 20);
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    input[type="radio"]{
+                        width: 20px;
+                        display: inline;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+}

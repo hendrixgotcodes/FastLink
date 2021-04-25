@@ -7,6 +7,9 @@
   position: relative;
   outline: none; }
 
+.primary_bg {
+  background-color: #14213d; }
+
 .complementary {
   color: #fca311; }
 
@@ -47,6 +50,9 @@
   border: none;
   cursor: pointer; }
 
+.btn--rnd {
+  border-radius: 3px; }
+
 .btn--lg {
   padding: .8rem;
   border-radius: 4px; }
@@ -57,12 +63,15 @@
 .btn--complementary {
   background-color: #fca311; }
 
+.btn--primary {
+  background-color: #14213d; }
+
 .btn--blk {
   display: block;
   width: 100%; }
 
 .form {
-  background-color: #fff;
+  background-color: #14213d;
   border-radius: 8px;
   padding: 2rem 1rem;
   color: #b3b3b3; }
