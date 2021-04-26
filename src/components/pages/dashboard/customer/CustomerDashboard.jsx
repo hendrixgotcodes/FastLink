@@ -6,23 +6,62 @@ import '../../../../css/pages/dashboard/CustomerDashboard.css';
 import UITab from '../../../utils/UITab';
 import UITables from '../../../utils/UITables';
 
+import {useDispatch} from 'react-redux'
+import {userSliceActions} from '../../../../store/features/userSlice'
+
 export default function CustomerDashboard() {
 
+    const dispatch = useDispatch()
+
     const [state, setState] = useState({
-        formShown: false
+        formShown: false,
+        requested: [
+            {
+                amountBorrowed: 100,
+                time: 12,
+                interest: 20,
+                amountToBePaid: 120
+            },
+            {
+                amountBorrowed: 200,
+                time: 12,
+                interest: 40,
+                amountToBePaid: 240
+            },
+            {
+                amountBorrowed: 300,
+                time: 12,
+                interest: 50,
+                amountToBePaid: 350
+            }
+        ]
+    })
+
+    const [formVisibility, setFormVisibility] = useState({
+        shown: false
     })
 
     const handleFormVisibility = ()=>{
 
-        if(state.formShown === true){
-            setState({
-                formShown: false
+        if(formVisibility.shown === true){
+
+            setFormVisibility({
+                shown: false
             })
+
         }else{
-            setState({
-                formShown: true
+
+            setFormVisibility({
+                shown: true
             })
+
         }
+
+    }
+
+    const handleSignOut = ()=>{
+
+        dispatch(userSliceActions.logOut())
 
     }
 
@@ -41,6 +80,7 @@ export default function CustomerDashboard() {
 
                     <button 
                         className="btn btn--md btn--complementary"
+                        onClick = {handleSignOut}
                         >
                             Logout
                     </button>
@@ -65,7 +105,7 @@ export default function CustomerDashboard() {
 
                     <div className="content">
 
-                        <div className={state.formShown === true ? "form_wrapper" : "form_wrapper form_wrapper--hidden"}>
+                        <div className={formVisibility.shown === true ? "form_wrapper" : "form_wrapper form_wrapper--hidden"}>
 
                             <form action="" className="form">
 
@@ -99,10 +139,43 @@ export default function CustomerDashboard() {
                                 <div index={1} >2 Two</div>
                                 <div index={2} >3 Three</div>
                             </UITab> */}
-                            <UITab tabNames={["Requested Loans", "Approved Loans"]}>
+                            <UITab tabNames={["Requested Loans", "Approved Loans", "Paid"]}>
 
-                                <UITables index={0} />
-                                <UITables index={1} />
+                                <UITables 
+                                    index={0} 
+                                    tableHeads={["Amount Borrowed", "Time (In Months)", "Amount To Be Paid (GHc)", "Actions"]} 
+                                    >
+                                    
+                                    {state.requested.map(request => (
+                                        <tr className="table_body_item pd">
+                                            <td className="table_data">{request.amountBorrowed}</td>
+                                            <td className="table_data">{request.time}</td>
+                                            {/* <td className="table_data">{request.interest}</td> */}
+                                            <td className="table_data">{request.amountToBePaid}</td>
+                                            <td className="table_data">{request.amountToBePaid}</td>
+                                        </tr>
+                                    ))}
+
+                                </UITables>
+
+                                <UITables 
+                                    index={1} 
+                                    tableHeads={["Amount Borrowed", "Time (In Months)", "Amount Paid (GHc)", "Actions"]} 
+                                    >
+                                    
+                                    {state.requested.map(request => (
+                                        <tr className="table_body_item pd">
+                                            <td className="table_data">{request.amountBorrowed}</td>
+                                            <td className="table_data">{request.time}</td>
+                                            {/* <td className="table_data">{request.interest}</td> */}
+                                            <td className="table_data">{request.amountToBePaid}</td>
+                                            <td className="table_data">{request.amountToBePaid}</td>
+                                        </tr>
+                                    ))}
+
+                                </UITables>
+
+                                
 
 
                             </UITab>

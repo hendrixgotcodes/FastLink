@@ -2,8 +2,20 @@ import React from 'react'
 
 import '../../css/pages/Signin.css'
 
+import {useSelector, useDispatch} from 'react-redux'
+import {userSliceActions} from '../../store/features/userSlice'
+
 
 export default function Signin() {
+
+    const dispatch = useDispatch()
+
+    const handleLogin = ()=>{
+
+        dispatch(userSliceActions.logIn())
+
+    }
+
     return (
         <div className="body">
 
@@ -42,7 +54,11 @@ export default function Signin() {
 
                     </div>
 
-                    <button className="btn btn--md btn--complementary btn--blk">Sign In</button>
+                    <button 
+                        className="btn btn--md btn--complementary btn--blk"
+                        onClick={handleLogin}
+                        >Sign In
+                    </button>
 
                     </form>
 

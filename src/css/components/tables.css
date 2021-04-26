@@ -1,0 +1,58 @@
+.table {
+  width: 100%;
+  display: block;
+  height: 100%; }
+  .table thead {
+    display: block;
+    width: 100%;
+    height: 3%;
+    background-color: #14213d;
+    padding: .5rem;
+    border-radius: 3px; }
+    .table thead tr {
+      display: flex;
+      flex-flow: row;
+      width: 100%;
+      padding: 0 2rem; }
+      .table thead tr .table_header {
+        color: #fff;
+        font-size: 1.1rem;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 300; }
+      .table thead tr .table_header--gap {
+        width: 5%; }
+      .table thead tr .w-sm {
+        width: 20%; }
+  .table tbody {
+    margin-top: 1rem;
+    display: block;
+    height: 97%;
+    overflow: auto; }
+    .table tbody .table_body_item {
+      display: flex;
+      flex-flow: row;
+      width: 100%;
+      background-color: #fff;
+      padding: .3rem 2rem;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f2f2f2; }
+      .table tbody .table_body_item:nth-child(odd) {
+        background-color: #fff; }
+      .table tbody .table_body_item:last-child {
+        margin-bottom: 0rem; }
+      .table tbody .table_body_item .table_data--avatar {
+        width: 0%; }
+      .table tbody .table_body_item .table_data {
+        width: 100%;
+        text-align: center; }
+      .table tbody .table_body_item .w-sm {
+        width: 20%; }
+    .table tbody .pd {
+      padding: .7rem 2rem; }
